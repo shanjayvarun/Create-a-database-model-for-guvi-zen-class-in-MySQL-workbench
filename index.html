@@ -1,0 +1,101 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <p class="main"> SQL queries to Create a Database - Zen Task</p>
+</head>
+
+<body class="bg">
+  <div class="task">
+    <div>
+      <b> CREATING TABLE-1 : </b>
+      <br>
+      <br>
+      create table stuDet<br>
+      (
+      id int,<br>
+      reqNo int,<br>
+      studentName Varchar(40),<br>
+      taskCompleted int,<br>
+      queries Varchar(100),<br>
+      attendance float<br>
+      );
+    </div>
+    <div>
+      <br>
+      <b> CREATING TABLE-2 : </b>
+      <br>
+      <br>
+      create table mentDet<br>
+      (
+      reqId int,<br>
+      mentorName Varchar(40),<br>
+      reqNo int,<br>
+      queryTitle Varchar(100),<br>
+      status Varchar(40)<br>
+      );
+    </div>
+    <div>
+      <br>
+      <b>UPDATING STUDENT DETAILS :</b>
+      <br>
+      <br>
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)<br>
+      values ( 1, "Akbar", 351, "Placement Query", "assigned" )<br>
+      <br>
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)<br>
+      values ( 2, "Tamil", 352, "Hackathon Query", "assigned" )<br>
+      <br>
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)<br>
+      values ( 3, "Raghav", 353, "Query regarding ReactJS", "assigned" )<br>
+      <br>
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)<br>
+      values ( 4, "Venkat", 354, "Query regarding NodeJS", "assigned" )<br>
+      <br>
+
+      <b>UPDATING STUDENT DETAILS :</b>
+      <br>
+      <br>
+
+      insert into mentDet (reqId, mentorName, reqNo, queryTitle, status)<br>
+      values ( 5, "Sai mohan", 355, "Query regarding Database", "assigned" )<br>
+      <br>
+    </div>
+    <div>
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+      values (1, 353, 'madhan', 6, 'Need assistance on creating class component', 70.22)<br>
+      <br>
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+      values (2, 351, 'Shanjay', 6, 'When Will the Placement Get Started', 80.22)<br>
+      <br>
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+      values (3, 354, 'Mohan', 6, 'How to Connect a database from NodeJS', 90.22)<br>
+      <br>
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+      values (4, 352, 'ManasKumar', 5, 'I cant Fetch Api from Spotify App', 70.22)<br>
+      <br>
+
+      insert into stuDet (id, reqNo, studentName, taskCompleted, queries, attendance)<br>
+      values (5, 355, 'Allirani', 2, 'How to join two tables and query it?', 50.22)<br>
+    </div>
+  </div>
+  <br>
+  </div>
+  <div>
+    <b>COMBINING TABLE-1 & TABLE-2 FOR CONSOLIDATION :</b><br>
+    <br>
+    select *<br>
+    from studet<br>
+    inner join mentdet<br>
+    on mentdet.reqNo=studet.reqNo;<br>
+  </div>
+  <br>
+  </div>
+<p> Thank you 🙏 </p>
+</body>
+</html>
